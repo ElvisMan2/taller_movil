@@ -1,0 +1,55 @@
+1.	PatientID: Identificación única del paciente.
+2.	Age: Edad del paciente.
+3.	Gender: Género del paciente (0: Femenino, 1: Masculino).
+4.	Ethnicity: Etnicidad del paciente.
+5.	SocioeconomicStatus: Nivel socioeconómico del paciente.
+6.	EducationLevel: Nivel educativo alcanzado por el paciente.
+7.	BMI: Índice de Masa Corporal del paciente.
+8.	Smoking: Tabaquismo (1: Sí, 0: No).
+9.	AlcoholConsumption: Consumo de alcohol (cantidad).
+10.	PhysicalActivity: Nivel de actividad física.
+11.	Diet: Tipo de dieta seguida.
+12.	SleepDuration: Duración del sueño diario.
+13.	WaterIntake: Ingesta diaria de agua.
+14.	BloodPressure: Presión arterial.
+15.	Cholesterol: Niveles de colesterol.
+16.	BloodGlucose: Niveles de glucosa en sangre.
+17.	Creatinine: Niveles de creatinina en sangre.
+18.	Hemoglobin: Niveles de hemoglobina.
+19.	Calcium: Niveles de calcio en sangre.
+20.	Phosphorus: Niveles de fósforo en sangre.
+21.	Albumin: Niveles de albúmina en sangre.
+22.	BloodUrea: Niveles de urea en sangre.
+23.	SerumPotassium: Niveles de potasio en suero.
+24.	SerumSodium: Niveles de sodio en suero.
+25.	ParathyroidHormone: Niveles de hormona paratiroidea.
+26.	UrineOutput: Producción de orina.
+27.	Anemia: Presencia de anemia (1: Sí, 0: No).
+28.	Edema: Presencia de edema (1: Sí, 0: No).
+29.	Hypertension: Hipertensión (1: Sí, 0: No).
+30.	Diabetes: Presencia de diabetes (1: Sí, 0: No).
+31.	CardiovascularDisease: Enfermedad cardiovascular (1: Sí, 0: No).
+32.	Obesity: Obesidad (1: Sí, 0: No).
+33.	FamilyHistory: Historia familiar de enfermedad renal (1: Sí, 0: No).
+34.	GeneticDisorder: Presencia de desorden genético (1: Sí, 0: No).
+35.	Medication: Uso de medicación específica.
+36.	PreviousKidneyIssue: Problemas renales previos (1: Sí, 0: No).
+37.	KidneyStones: Presencia de cálculos renales (1: Sí, 0: No).
+38.	UrinaryTractInfection: Infección del tracto urinario (1: Sí, 0: No).
+39.	Proteinuria: Presencia de proteínas en la orina (1: Sí, 0: No).
+40.	Hematuria: Presencia de sangre en la orina (1: Sí, 0: No).
+41.	Nausea: Presencia de náuseas (1: Sí, 0: No).
+42.	Vomiting: Presencia de vómitos (1: Sí, 0: No).
+43.	Fatigue: Presencia de fatiga (1: Sí, 0: No).
+44.	Dizziness: Presencia de mareos (1: Sí, 0: No).
+45.	Pain: Presencia de dolor (1: Sí, 0: No).
+46.	AppetiteLoss: Pérdida de apetito (1: Sí, 0: No).
+47.	Itching: Presencia de prurito (1: Sí, 0: No).
+48.	QualityOfLifeScore: Puntuación de calidad de vida.
+49.	HeavyMetalsExposure: Exposición a metales pesados (1: Sí, 0: No).
+50.	OccupationalExposureChemicals: Exposición ocupacional a químicos (1: Sí, 0: No).
+51.	WaterQuality: Calidad del agua consumida.
+52.	MedicalCheckupsFrequency: Frecuencia de chequeos médicos.
+53.	MedicationAdherence: Adherencia a la medicación.
+54.	HealthLiteracy: Literacidad en salud.
+55.	Diagnosis: Diagnóstico de enfermedad renal crónica (1: Sí, 0: No).
