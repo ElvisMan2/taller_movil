@@ -16,9 +16,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-
+/**
+ * Controlador REST para manejar operaciones relacionadas con predicciones médicas.
+ */
 @RestController
-@RequestMapping("/predicciones")
+@RequestMapping("/api/predicciones")
 public class PrediccionController {
 
     @Autowired
@@ -40,9 +42,25 @@ public class PrediccionController {
         }).orElse(ResponseEntity.notFound().build());
     }
 
-    @GetMapping
+    @GetMapping("/")
     public List<Prediccion> listar() {
         return prediccionRepo.findAll();
     }
+
+    /**
+     * Devuelve todas las predicciones asociadas a un usuario específico.
+     *
+     * @param idUsuario ID del usuario.
+     * @return Lista de predicciones del usuario.
+     */
+    @GetMapping("/{idUsuario}")
+    public ResponseEntity<List<Prediccion>> obtenerPorUsuario(@PathVariable Long idUsuario) {
+        List<Prediccion> predicciones = prediccionRepo.findByUsuarioId(idUsuario);
+        if (predicciones.isEmpty()) {
+            return ResponseEntity.noContent().build(); // 204 No Content si no hay predicciones
+        }
+        return ResponseEntity.ok(predicciones); // 200 OK con la lista
+    }
+
 }
 

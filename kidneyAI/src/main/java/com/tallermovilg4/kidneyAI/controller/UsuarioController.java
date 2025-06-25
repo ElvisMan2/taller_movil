@@ -18,14 +18,15 @@ import java.util.Optional;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestParam;
 
+
 @RestController
-@RequestMapping("/usuarios")
+@RequestMapping("/api/usuarios")
 public class UsuarioController {
 
     @Autowired
     private IUsuarioRepository usuarioRepo;
 
-    @GetMapping
+    @GetMapping("/")
     public List<Usuario> listar() {
         return usuarioRepo.findAll();
     }
@@ -37,7 +38,7 @@ public class UsuarioController {
                       .orElseGet(() -> ResponseEntity.notFound().build());
     }
 
-    @PostMapping
+    @PostMapping("/")
     public Usuario crear(@RequestBody Usuario usuario) {
         return usuarioRepo.save(usuario);
     }
@@ -53,10 +54,10 @@ public class UsuarioController {
         usuarioRepo.deleteById(id);
     }
 
-    // 🔐 Login por correo y contraseña
+    // 🔐 Login por correo y password
     @PostMapping("/login")
-    public ResponseEntity<Usuario> login(@RequestParam String correo, @RequestParam String contraseña) {
-        Optional<Usuario> usuario = usuarioRepo.findByCorreoAndContraseña(correo, contraseña);
+    public ResponseEntity<Usuario> login(@RequestParam String correo, @RequestParam String password) {
+        Optional<Usuario> usuario = usuarioRepo.findByCorreoAndPassword(correo, password);
         return usuario.map(ResponseEntity::ok)
                       .orElseGet(() -> ResponseEntity.status(401).build()); // 401 Unauthorized
     }

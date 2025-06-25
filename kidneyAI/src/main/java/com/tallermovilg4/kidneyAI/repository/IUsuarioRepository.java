@@ -7,5 +7,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 @Repository
 public interface IUsuarioRepository extends JpaRepository<Usuario, Long>{
-    Optional<Usuario> findByCorreoAndContraseña(String correo, String contraseña);
+    Optional<Usuario> findByCorreoAndPassword(String correo, String password);
 }
