@@ -36,11 +36,20 @@ public class PrediccionController {
     public ResponseEntity<Prediccion> crearPrediccion(@PathVariable Long usuarioId, @RequestBody Prediccion pred) {
         return usuarioRepo.findById(usuarioId).map(usuario -> {
             pred.setUsuario(usuario);
-            pred.setResultado(servicio.calcularPrediccion());
+
+            // Calcular la predicción con los datos del cuerpo
+            double resultado = servicio.calcularPrediccion(pred);
+            pred.setResultado(resultado);
+
+            // Fecha actual
             pred.setFechaRegistro(LocalDate.now());
-            return ResponseEntity.ok(prediccionRepo.save(pred));
+
+            // Guardar y devolver
+            Prediccion saved = prediccionRepo.save(pred);
+            return ResponseEntity.ok(saved);
         }).orElse(ResponseEntity.notFound().build());
     }
+
 
     @GetMapping("/")
     public List<Prediccion> listar() {

@@ -34,6 +34,7 @@ public class Prediccion implements Serializable {
     private double serumElectrolytesSodium;
     private int gender;
     private int age;
+
     private double resultado;
 
     private LocalDate fechaRegistro;
